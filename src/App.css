@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.card-container {
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  height: auto; /* Change height to auto for responsiveness */
+  margin: 150px auto; /* Center align horizontally, adjust vertical margin */
+  position: relative;
+  border-radius: 12px;
+  box-shadow: rgba(175, 182, 182, 0.229) 5px 5px;
+}
+
+.content {
+  padding: 1rem;
+  font-family: Poppins;
+  text-align: center; /* Center align content */
+}
+
+.content h1 {
+  font-size: 28px;
+  font-family: Playfair display;
+}
+
+.content p {
+  color: #3a3a3a;
+}
+
+.sub {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically on smaller screens */
+  gap: 12px;
+}
+
+input[type=email] {
+  padding: 12px;
+  width: 100%;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  font-family: Poppins;
+}
+
+input[type=submit] {
+  padding: 12px; /* Increase padding for better touch experience */
+  background-color: black;
+  color: white;
+  width: 100%; /* Button takes full width on smaller screens */
+  border-radius: 5px;
+  border: none;
+  font-family: Poppins;
+}
+
+.check {
+  display: flex;
+  flex-direction: row; /* Stack checkbox and text vertically on smaller screens */
+  gap: 8px;
+}
+
+.check p {
+  font-size: 10px;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-container {
+    margin: 150px 400px; /* Adjust margin for larger screens */
+  }
+  
+  .sub {
+    flex-direction: row;
+    padding-left: 30px; /* Revert to horizontal layout for input and button */
+    padding-right: 30px;
+  }
+  
+  input[type=submit] {
+    width: auto; /* Allow button to take its natural width */
+  }
+  
+  .check {
+    flex-direction: row; /* Revert to horizontal layout for checkbox and text */
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
